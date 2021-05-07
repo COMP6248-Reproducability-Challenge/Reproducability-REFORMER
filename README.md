@@ -1,9 +1,21 @@
 # Reproducability-REFORMER
-COMP6248-Reproducability-REFORMER
+
+--------------------------------------------------------
+
+Origin paper: 
+
+REFORMER: THE EFFICIENT TRANSFORMER  
+
+https://arxiv.org/pdf/2001.04451.pdf
+
+
+--------------------------------------------------------
 
 Owner:
 
 Fei Pan: fp1u20@soton.ac.uk
+
+--------------------------------------------------------
 
 Update:
 
