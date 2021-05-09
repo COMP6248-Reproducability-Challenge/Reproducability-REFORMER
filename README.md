@@ -58,3 +58,10 @@ Update:
 
 2021-05-10: Novel_Masked_LM_lsh_head.ipynb
 
+--------------------------------------------------------
+
+REFERENCES:
+
+https://github.com/google/trax/tree/master/trax/models/reformer
+
+https://github.com/huggingface/transformers
