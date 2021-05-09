@@ -15,7 +15,7 @@
 import csv
 from collections import defaultdict
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import List, Optional, Dict
 
 import matplotlib.pyplot as plt
 import numpy as np
@@ -27,6 +27,9 @@ from transformers import HfArgumentParser
 def list_field(default=None, metadata=None):
     return field(default_factory=lambda: default, metadata=metadata)
 
+def dict_field(default=None, metadata=None):
+    return field(default_factory=lambda: default, metadata=metadata)
+
 
 @dataclass
 class PlotArguments:
@@ -36,9 +39,16 @@ class PlotArguments:
     title: str = field(
         metadata={"help": "The title of plot."},
     )
+
     csv_file: str = field(
         metadata={"help": "The csv file to plot."},
     )
+
+    x_label: str = field(
+        default=None,
+        metadata={"help": "The x axis label of plot."},
+    )
+
     plot_along_batch: bool = field(
         default=False,
         metadata={"help": "Whether to plot along batch size or sequence length. Defaults to sequence length."},
@@ -65,6 +75,20 @@ class PlotArguments:
         default=None, metadata={"help": "List of model names that are used instead of the ones in the csv file."}
     )
 
+    is_x_dic: bool = field(
+        default=False,
+        metadata={"help": "xticks dict."}
+    )
+
+    is_x_dic_names: bool = field(
+        default=False,
+        metadata={"help": "xticks dict."}
+    )
+
+    is_label_btz: bool = field(
+        default=True,
+        metadata={"help": "label contains batch_size"}
+    )
 
 def can_convert_to_int(string):
     try:
@@ -105,6 +129,7 @@ class Plot:
                     ] = float(row["result"])
 
     def plot(self):
+        x_dic = {1024: 1, 2048: 2, 4096: 3, 8192: 4, 16386: 5, 32768: 6}
         fig, ax = plt.subplots()
         if self.args.title is None:
           title_str = "Time usage" if self.args.is_time else "Memory usage"
@@ -148,10 +173,20 @@ class Plot:
                 )
 
                 x_axis_array = np.asarray(x_axis_array, np.int)[: len(y_axis_array)]
-                plt.scatter(
-                    x_axis_array, y_axis_array, label=f"{label_model_name} - {inner_loop_label}: {inner_loop_value}"
-                )
-                plt.plot(x_axis_array, y_axis_array, "--")
+
+                if self.args.is_x_dic is True:
+                    x_axis_array = map(lambda x: x_dic[x], x_axis_array)
+                    x_axis_array = list(x_axis_array)
+
+                if self.args.is_label_btz is True:
+                    plt.scatter(
+                        x_axis_array, y_axis_array, label=f"{label_model_name} - {inner_loop_label}: {inner_loop_value}"
+                    )
+                else:
+                    plt.scatter(
+                        x_axis_array, y_axis_array, label=f"{label_model_name}"
+                    )
+                plt.plot(x_axis_array, y_axis_array)
             if not self.args.title:
               title_str += f" {label_model_name} vs."
         if self.args.title is None:
@@ -160,8 +195,21 @@ class Plot:
 
         # plot
         plt.title(title_str if self.args.title is None else self.args.title)
-        plt.xlabel(x_axis_label)
+
+        if self.args.x_label is None:
+            plt.xlabel(x_axis_label)
+        else:
+            plt.xlabel(self.args.x_label)
+
         plt.ylabel(y_axis_label)
+
+        if self.args.is_x_dic is True:
+            if self.args.is_x_dic_names is True:
+                x_dic_names = ["1024/32", "2048/16", "4096/8", "8192/4", "16386/2", "32768/1"]
+                plt.xticks(list(x_dic.values()), x_dic_names)
+            else:
+                plt.xticks(list(x_dic.values()), list(x_dic.keys()))
+
         plt.legend()
 
         if self.args.figure_png_file is not None:
