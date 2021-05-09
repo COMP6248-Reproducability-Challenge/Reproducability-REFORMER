@@ -6,7 +6,7 @@ Origin paper:
 
 REFORMER: THE EFFICIENT TRANSFORMER  
 
-https://arxiv.org/pdf/2001.04451.pdf
+https://openreview.net/forum?id=rkgNKkHtvB
 
 
 --------------------------------------------------------
