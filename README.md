@@ -8,6 +8,33 @@ REFORMER: THE EFFICIENT TRANSFORMER
 
 https://openreview.net/forum?id=rkgNKkHtvB
 
+--------------------------------------------------------
+
+Experiments:
+
+
+EFFECT OF SHAREDQ:
+
+https://github.com/COMP6248-Reproducability-Challenge/Reproducability-REFORMER/blob/main/IMDb_Classification_share_QK.ipynb
+
+https://github.com/COMP6248-Reproducability-Challenge/Reproducability-REFORMER/blob/main/Novel_Masked_LM_share_QK.ipynb
+
+
+LSHATTENTION EVALUATION SPEED AND MEMORY:
+
+
+https://github.com/COMP6248-Reproducability-Challenge/Reproducability-REFORMER/blob/main/Reformer_LSH.ipynb
+
+
+https://github.com/COMP6248-Reproducability-Challenge/Reproducability-REFORMER/blob/main/Reformer_LSH_Head.ipynb
+
+
+EFFECT OF NUMBER OF HASHING ROUNDS ON THE PERFORMANCE:
+
+https://github.com/COMP6248-Reproducability-Challenge/Reproducability-REFORMER/blob/main/IMDb_Classification_lsh_head.ipynb
+
+https://github.com/COMP6248-Reproducability-Challenge/Reproducability-REFORMER/blob/main/Novel_Masked_LM_lsh_head.ipynb
+
 
 --------------------------------------------------------
 
