@@ -13,7 +13,7 @@ https://openreview.net/forum?id=rkgNKkHtvB
 Experiments:
 
 
-EFFECT OF SHAREDQ:
+EFFECT OF SHARED-QK:
 
 https://github.com/COMP6248-Reproducability-Challenge/Reproducability-REFORMER/blob/main/IMDb_Classification_share_QK.ipynb
 
