@@ -13,27 +13,32 @@ https://openreview.net/forum?id=rkgNKkHtvB
 Experiments:
 
 
-EFFECT OF SHARED-QK:
+Effect of Shared-QK:    @Author fp1u20
 
-https://github.com/COMP6248-Reproducability-Challenge/Reproducability-REFORMER/blob/main/IMDb_Classification_share_QK.ipynb
+https://github.com/COMP6248-Reproducability-Challenge/Reproducability-REFORMER/blob/main/Effect_of_Shared_QK/Shared_QK_IMDb.ipynb
 
-https://github.com/COMP6248-Reproducability-Challenge/Reproducability-REFORMER/blob/main/Novel_Masked_LM_share_QK.ipynb
-
-
-LSHATTENTION EVALUATION SPEED AND MEMORY:
+https://github.com/COMP6248-Reproducability-Challenge/Reproducability-REFORMER/blob/main/Effect_of_Shared_QK/Shared_QK_Novel.ipynb
 
 
-https://github.com/COMP6248-Reproducability-Challenge/Reproducability-REFORMER/blob/main/Reformer_LSH.ipynb
+LSH Attention Evaluation Speed and Memory:     @Author fp1u20
 
 
-https://github.com/COMP6248-Reproducability-Challenge/Reproducability-REFORMER/blob/main/Reformer_LSH_Head.ipynb
+https://github.com/COMP6248-Reproducability-Challenge/Reproducability-REFORMER/blob/main/LSH_Evaluation/Reformer_LSH.ipynb
 
 
-EFFECT OF NUMBER OF HASHING ROUNDS ON THE PERFORMANCE:
+https://github.com/COMP6248-Reproducability-Challenge/Reproducability-REFORMER/blob/main/LSH_Evaluation/Reformer_LSH_Head.ipynb
 
-https://github.com/COMP6248-Reproducability-Challenge/Reproducability-REFORMER/blob/main/IMDb_Classification_lsh_head.ipynb
 
-https://github.com/COMP6248-Reproducability-Challenge/Reproducability-REFORMER/blob/main/Novel_Masked_LM_lsh_head.ipynb
+Effect of Number of Hashing Rounds on the Performance:     @Author fp1u20
+
+https://github.com/COMP6248-Reproducability-Challenge/Reproducability-REFORMER/blob/main/Effect_of_Number_of_Hashing_Rounds/Lsh_hash_rounds_IMDB.ipynb
+
+https://github.com/COMP6248-Reproducability-Challenge/Reproducability-REFORMER/blob/main/Effect_of_Number_of_Hashing_Rounds/Lsh_hash_rounds_Novel.ipynb
+
+
+Chunking Feed-Forward:      @Author lg4n20
+
+https://github.com/COMP6248-Reproducability-Challenge/Reproducability-REFORMER/blob/main/Chunking_Feed-Forward/chunck_forward.ipynb
 
 
 --------------------------------------------------------
@@ -46,19 +51,15 @@ Fei Pan: fp1u20@soton.ac.uk
 
 Update:
 
-2021-05-03: plot_csv_file.py
+2021-05-03: utils
 
-2021-05-04: lsh speed and memory
+2021-05-04: LSH Attention Evaluation Speed and Memory
 
-2021-05-08: share_QK for IMDb_Classification
+2021-05-08: Effect of Shared-QK
 
-2021-05-09: Novel_Masked_LM_share_QK.ipynb
+2021-05-10: Effect of Number of Hashing Rounds on the Performance
 
-2021-05-09: IMDb_Classification_share_QK.ipynb
-
-2021-05-09: IMDb Classification - lsh-head.ipynb
-
-2021-05-10: Novel_Masked_LM_lsh_head.ipynb
+2021-05-12: Chunking Feed-Forward
 
 --------------------------------------------------------
 
