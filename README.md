@@ -50,8 +50,11 @@ https://github.com/COMP6248-Reproducability-Challenge/Reproducability-REFORMER/b
 Team member:
 
 Fei Pan: fp1u20@soton.ac.uk
+
 Yuhang Liu: yl17f20@soton.ac.uk
+
 Yang Yue: yy13n20@soton.ac.uk
+
 Liming Guo: lg4n20@soton.ac.uk
 
 --------------------------------------------------------
