@@ -41,11 +41,18 @@ Chunking Feed-Forward:      @Author lg4n20
 https://github.com/COMP6248-Reproducability-Challenge/Reproducability-REFORMER/blob/main/Chunking_Feed-Forward/chunck_forward.ipynb
 
 
+Axial Positional Encoding:      @Author  yl17f20
+https://github.com/COMP6248-Reproducability-Challenge/Reproducability-REFORMER/blob/main/Axial_Positional_Encoding/Reformer_Axial_Pos.ipynb
+
+
 --------------------------------------------------------
 
-Owner:
+Team member:
 
 Fei Pan: fp1u20@soton.ac.uk
+Yuhang Liu: yl17f20@soton.ac.uk
+Yang Yue: yy13n20@soton.ac.uk
+Liming Guo: lg4n20@soton.ac.uk
 
 --------------------------------------------------------
 
@@ -60,6 +67,8 @@ Update:
 2021-05-10: Effect of Number of Hashing Rounds on the Performance
 
 2021-05-12: Chunking Feed-Forward
+
+2021-05-13: Axial Positional Encodings
 
 --------------------------------------------------------
 
